@@ -1,9 +1,9 @@
 from flask import Flask
 
-from article.views import article
-from user.views import user
-from index.views import index
-from report.views import report
+from website.article.views import article
+from website.user.views import user
+from website.index.views import index
+from website.report.views import report
 
 VIEWS = [
     index,
