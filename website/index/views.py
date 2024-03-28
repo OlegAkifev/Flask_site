@@ -8,4 +8,3 @@ def main_page():
     return render_template(
         "base.html"
     )
-

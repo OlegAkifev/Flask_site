@@ -5,6 +5,21 @@
 {% endblock %}
 {% block body %}
     <h1>
-        {{ user_name }}
+        {{ user.email }}
     </h1>
+    <p>
+        First name: {{ user.first_name }}
+        <br>
+        Last name: {{ user.last_name }}
+    </p>
+    <h4>Articles:</h4>
+    {% for article in user.author.articles %}
+        <ul>
+            <li>
+                <a href="{{ url_for('article.get_article', pk=article.id) }}">
+                    {{ article.title }}
+                </a>
+            </li>
+        </ul>
+    {% endfor %}
 {% endblock %}
